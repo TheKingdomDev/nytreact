@@ -19,7 +19,7 @@ app.use(express.static('./public'));
 //add link for heroku/mlab deployment
 //var link = ;
 //Local link
-var link = 'mongodb://localhost27017/nytreact';
+var link = 'mongodb://localhost/nytreact';
 //connect to mongodb database
 mongoose.connect(link);
 var db = mongoose.connection;
