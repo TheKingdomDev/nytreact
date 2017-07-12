@@ -1,9 +1,12 @@
+//initialize express server - load in mongoose and Schema
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var Article = require('./models/Article.js');
 
+//initialize express application and port
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -17,7 +20,7 @@ app.use(express.static('./public'));
 //var link = ;
 //Local link
 var link = 'mongodb://localhost27017/nytreact';
-
+//connect to mongodb database
 mongoose.connect(link);
 var db = mongoose.connection;
 
